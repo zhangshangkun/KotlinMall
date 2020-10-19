@@ -1,5 +1,6 @@
 package com.zsk.usercenter.service
 
+import com.zsk.usercenter.data.protocol.UserInfo
 import rx.Observable
 
 
@@ -11,4 +12,5 @@ import rx.Observable
  */
 interface UserService {
     fun register(mobile:String,verifyCode:String,pwd:String): Observable<Boolean>
+    fun login(mobile:String,pwd:String,pushId:String): Observable<UserInfo>
 }
